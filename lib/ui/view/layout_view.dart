@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/ui/view/home/home_view.dart';
-import 'package:smart_home/ui/view/report/report.dart';
-import 'package:smart_home/ui/view/routines/routinesview.dart';
+import 'package:smart_home/ui/view/routines/routines.dart';
+import 'package:smart_home/ui/view/report/reportview.dart';
+import 'package:smart_home/ui/view/setting/set.dart';
 import 'package:smart_home/ui/widget/size_widget.dart';
 import 'package:smart_home/ui/widget/title_widget.dart';
 
@@ -31,8 +32,8 @@ class _LayoutWidget extends State<LayoutView> {
 
   final bodyWidgets = const <Widget>[
     HomeWidget(),
-    ReportView(),
     RoutinesView(),
+    ReportView(),
   ];
 
   @override
@@ -57,12 +58,20 @@ class _LayoutWidget extends State<LayoutView> {
           ),
         ],
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return SettingView();
+                },
+              ),
+            );
+          },
           padding: EdgeInsets.only(left: 24),
           icon: Icon(Icons.short_text_sharp, size: 40),
         ),
       ),
-
       body: PageView(
         controller: this._pageController,
         onPageChanged: _updateSelectedIndex,
@@ -75,7 +84,10 @@ class _LayoutWidget extends State<LayoutView> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home_filled), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.sunny), label: 'Routines'),
-          BottomNavigationBarItem(icon: Icon(Icons.show_chart), label: 'report',),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.show_chart),
+            label: 'report',
+          ),
         ],
         onTap: (selectedIndex) {
           _updateSelectedIndex(

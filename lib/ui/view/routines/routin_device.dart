@@ -55,13 +55,13 @@ class _RoutinDevice extends State<RoutinView> {
                     children: [
                       Icon(
                         widget._iconsView,
-                        color: isChecked ? Colors.black : Colors.grey,
+                        color: isChecked ? Colors.white : Colors.grey,
                       ),
                       SizedBox(width: 5),
                       Text(
                         widget._text2,
                         style: TextStyle(
-                          color: isChecked ? Colors.black : Colors.grey,
+                          color: isChecked ? Colors.white : Colors.grey,
                             fontSize: 15
                         ),
                       ),
@@ -71,13 +71,13 @@ class _RoutinDevice extends State<RoutinView> {
                     children: [
                       Icon(
                         widget._iconsView2,
-                        color: isChecked ? Colors.black : Colors.grey,
+                        color: isChecked ? Colors.white : Colors.grey,
                       ),
                       SizedBox(width: 5),
                       Text(
                         widget._text3,
                         style: TextStyle(
-                          color: isChecked ? Colors.black : Colors.grey,
+                          color: isChecked ? Colors.white : Colors.grey,
                             fontSize: 15
                         ),
                       ),
