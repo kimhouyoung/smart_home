@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class IconsView extends StatefulWidget {
   const IconsView({super.key, required IconData iconView, required String text})
-    : this._iconsView = iconView,
-      this._text = text;
+      : this._iconsView = iconView,
+        this._text = text;
 
   final IconData _iconsView;
   final String _text;
@@ -23,11 +23,11 @@ class _IconsWidget extends State<IconsView> {
         Padding(padding: EdgeInsets.only(right: 24)),
         IconButton(
           style: ElevatedButton.styleFrom(
-            fixedSize: Size(90, 90),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            backgroundColor: background1
+              fixedSize: Size(90, 90),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              backgroundColor: background1
           ),
           iconSize: 60,
           onPressed: () {
